@@ -16,8 +16,11 @@
   <div id="app">
     <!-- Slider container -->
     <div class="slider"
+          tabindex="0"
           @mouseenter="stopInterval"
-          @mouseleave="startInterval">
+          @mouseleave="startInterval"
+          @keyup.arrow-left="prevImg"
+          @keyup.arrow-right="nextImg">
 
       <!-- Previous img -->
       <div class="prev" @click="prevImg">
