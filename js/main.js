@@ -8,5 +8,21 @@ const app = new Vue({
       "./img/image4.jpg"
     ],
     imgIndex: 0,
-  },
+  }, // <- end data
+  methods: {
+    prevImg() {
+      if(this.imgIndex === 0) {
+        this.imgIndex = this.imgUrls.length - 1;
+      } else {
+        this.imgIndex--;
+      }
+    },
+    nextImg() {
+      if(this.imgIndex === this.imgUrls.length - 1) {
+        this.imgIndex = 0;
+      } else {
+        this.imgIndex++;
+      }
+    },
+  },  // <- end methods
 });

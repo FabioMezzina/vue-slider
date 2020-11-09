@@ -15,7 +15,7 @@
   
   <div id="app">
     <div class="slider">
-      <div class="prev">
+      <div class="prev" @click="prevImg">
         <i class="fas fa-angle-double-left"></i>
       </div>
 
@@ -23,7 +23,7 @@
         <img v-bind:src="imgUrls[imgIndex]" alt="img">
       </div>
 
-      <div class="next">
+      <div class="next" @click="nextImg">
         <i class="fas fa-angle-double-right"></i>
       </div>
 

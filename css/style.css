@@ -62,7 +62,13 @@
 
 .prev i,
 .next i {
-  color: rgb(0, 128, 128);
+  color: rgba(0, 128, 128, .5);
+  transition: color .2s;
+}
+
+.prev:hover i,
+.next:hover i {
+  color: rgba(0, 128, 128, 1);
 }
 
 /* DOTS */
@@ -84,6 +90,11 @@
 .dots li {
   color: rgba(0, 128, 128, .2);
   cursor: pointer;
+  transition: color .2s;
+}
+
+.dots li:hover {
+  color: rgba(0, 128, 128, .5);
 }
 
 .dots li.active {
