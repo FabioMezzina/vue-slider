@@ -16,5 +16,8 @@ const app = new Vue({
     nextImg() {
       this.imgIndex = (this.imgIndex === this.imgUrls.length - 1) ? 0 : this.imgIndex + 1;
     },
+    setPhoto(index) {
+      this.imgIndex = index;
+    }
   },  // <- end methods
 });
