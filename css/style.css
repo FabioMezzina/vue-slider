@@ -62,8 +62,25 @@
 
 .prev i,
 .next i {
+  position: relative;  
   color: rgba(0, 128, 128, .5);
-  transition: color .2s;
+  transition: .2s;
+}
+
+.prev i {
+  right: 0;
+}
+
+.next i {
+  left: 0;
+}
+
+.prev:hover i {
+  right: 10px;
+}
+
+.next:hover i {
+  left: 10px;
 }
 
 .prev:hover i,
