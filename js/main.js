@@ -11,18 +11,10 @@ const app = new Vue({
   }, // <- end data
   methods: {
     prevImg() {
-      if(this.imgIndex === 0) {
-        this.imgIndex = this.imgUrls.length - 1;
-      } else {
-        this.imgIndex--;
-      }
+      this.imgIndex = (this.imgIndex === 0) ? this.imgUrls.length - 1 : this.imgIndex - 1;
     },
     nextImg() {
-      if(this.imgIndex === this.imgUrls.length - 1) {
-        this.imgIndex = 0;
-      } else {
-        this.imgIndex++;
-      }
+      this.imgIndex = (this.imgIndex === this.imgUrls.length - 1) ? 0 : this.imgIndex + 1;
     },
   },  // <- end methods
 });
