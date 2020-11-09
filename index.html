@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vue Slider</title>
+  <!-- fontawesome cdn -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'/>
   <!-- style -->
   <link rel="stylesheet" href="./css/style.css">
   <!-- Vue.js -->
@@ -11,6 +13,28 @@
 </head>
 <body>
   
+  <div id="app">
+    <div class="slider">
+      <div class="prev">
+        <i class="fas fa-angle-double-left"></i>
+      </div>
+
+      <div class="images">
+        <img v-bind:src="imgUrls[imgIndex]" alt="img">
+      </div>
+
+      <div class="next">
+        <i class="fas fa-angle-double-right"></i>
+      </div>
+
+      <div class="dots">
+        <li v-for="(img,index) in imgUrls"
+            v-bind:class="['fas fa-circle', index === imgIndex ? 'active' : null]">
+        </li>
+      </div>
+    </div>
+  </div>
+
   <!-- main script -->
   <script src="./js/main.js"></script>
 </body>
