@@ -30,7 +30,7 @@
       <div class="dots">
         <li v-for="(img,index) in imgUrls"
             v-bind:class="['fas fa-circle', index === imgIndex ? 'active' : null]"
-            @click="setPhoto(index)">
+            @click="setImg(index)">
         </li>
       </div>
     </div>
