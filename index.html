@@ -14,19 +14,27 @@
 <body>
   
   <div id="app">
-    <div class="slider">
+    <!-- Slider container -->
+    <div class="slider"
+          @mouseenter="stopInterval"
+          @mouseleave="startInterval">
+
+      <!-- Previous img -->
       <div class="prev" @click="prevImg">
         <i class="fas fa-angle-double-left"></i>
       </div>
 
+      <!-- Images container -->
       <div class="images">
         <img v-bind:src="imgUrls[imgIndex]" alt="img">
       </div>
 
+      <!-- Next image -->
       <div class="next" @click="nextImg">
         <i class="fas fa-angle-double-right"></i>
       </div>
 
+      <!-- Navigation dots -->
       <div class="dots">
         <li v-for="(img,index) in imgUrls"
             v-bind:class="['fas fa-circle', index === imgIndex ? 'active' : null]"
